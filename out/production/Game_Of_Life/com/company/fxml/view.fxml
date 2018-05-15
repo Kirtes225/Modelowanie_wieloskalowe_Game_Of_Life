@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="627.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/9.0.1"
+            fx:controller="com.company.controllers.ViewController">
+    <children>
+        <Canvas fx:id="canvas" height="502.0" layoutX="14.0" layoutY="109.0" onMouseClicked="#canvasOnMouseClicked"
+                onMouseDragged="#canvasOnMouseDragged" width="765.0" AnchorPane.bottomAnchor="5.0"
+                AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="120.0"/>
+        <Button fx:id="randomizeButton" layoutX="14.0" layoutY="35.0" mnemonicParsing="false"
+                onAction="#randomizeButtonOnAction" prefHeight="25.0" prefWidth="83.0" text="Generuj"/>
+        <Button fx:id="startAndStopButton" layoutX="110.0" layoutY="35.0" mnemonicParsing="false"
+                onAction="#startAndStopButtonOnAction" prefHeight="25.0" prefWidth="83.0" text="Start"/>
+        <Button fx:id="clearButton" layoutX="205.0" layoutY="35.0" mnemonicParsing="false"
+                onAction="#clearButtonOnAction" prefHeight="25.0" prefWidth="83.0" text="Wyczyść"/>
+        <MenuBar layoutY="2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Wstaw">
+                    <items>
+                        <Menu mnemonicParsing="false" text="Struktury niezmienne (Still lifes)">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#blockStillLifesOnAction"
+                                          text="Klocek (block)"/>
+                                <MenuItem mnemonicParsing="false" onAction="#boatStillLifesOnAction"
+                                          text="Łódź (boat)"/>
+                                <MenuItem mnemonicParsing="false" onAction="#loafStillLifesOnAction"
+                                          text="Bochenek (loaf)"/>
+                                <MenuItem mnemonicParsing="false" onAction="#beehiveStillLifesOnAction"
+                                          text="Kryształ (beehive)"/>
+                                <MenuItem mnemonicParsing="false" onAction="#tubStillLifesOnAction"
+                                          text="Koniczynka (tub)"/>
+                                <MenuItem mnemonicParsing="false" onAction="#pondStillLifesOnAction"
+                                          text="Staw (pond)"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Oscylatory (Oscillators)">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#blinkerOscillatorsOnAction"
+                                          text="Blinker"/>
+                                <MenuItem mnemonicParsing="false" onAction="#toadOscillatorsOnAction"
+                                          text="Żabka (toad)"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Statki (Spaceships)">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#gliderSpaceshipsOnAction" text="Glider"/>
+                            </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="Działa (Guns)">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#gospelGliderGunGunsOnAction"
+                                          text="Gospel Glider Gun"/>
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false">
+                    <graphic>
+                        <Label onMouseClicked="#aboutLabelOnMouseClicked" text="O autorze"/>
+                    </graphic>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Label fx:id="generationLabel" alignment="CENTER" layoutX="16.0" layoutY="68.0" prefHeight="25.0"
+               prefWidth="274.0" textFill="RED"/>
+    </children>
+</AnchorPane>
